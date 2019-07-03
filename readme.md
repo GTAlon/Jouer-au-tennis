@@ -16,6 +16,12 @@ Le projet est composé de plusieurs étapes :
 *	Uwamp (serveur web local)
 *	API JQuery
 
+Le programme ID3 récupère une matrice de données, les traites puis les renvoie sous forme d’arbre.
+Comment l’algorithme calcule les données, les utilisent et les manipulent ?
+
+Pour le calcul, l’ID3 utilise l’entropie de SHANNON afin de calculer une colonne de donnée ayant le même attribut, et ainsi trouver l’exemple le plus discriminant.
+Il faut ensuite effectuer un calcul de probabilité sur l’ensemble de la matrice de donnée pour savoir quel attribut tester en premier, c’est le gain d’entropie.
+
 J’ai utilisé une petite matrice, « jouer au tennis ». Pour ce faire, j’ai décomposé le processus en plusieurs étapes :
 
 ![](https://github.com/GTAlon/Jouer-au-tennis/blob/master/image018.png)
@@ -37,7 +43,7 @@ Voici le résultat en sortie :
 La dernière consigne du stage est de mettre le résultat sous forme de page HTML.
 On m’a fourni un plugin Jquery permettant de crée un arbre de décision dynamique via des boutons et des questions.
 J’ai utilisé le résultat en sortie pour crée un processus de questionnement.
-*	La variable « decisions » peut établir un ou plusieurs variable « answer » 
+*	La variable « decisions » peut établir une ou plusieurs variable « answer » 
 *	La variable « answer » crée un bouton
 *	La variable « class » permet de choisir une couleur pour la variable « answer »
 *	La variable « message » comme son nom l’indique, envoie un message.
